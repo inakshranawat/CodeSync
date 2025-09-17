@@ -15,7 +15,7 @@ export default function Room() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    socket = io('http://localhost:5000');
+    socket = io('https://codesync-backend-qplu.onrender.com');
     socket.emit('joinRoom', { roomId, username });
 
     socket.on('loadCode', (roomCode) => setCode(roomCode));
